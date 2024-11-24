@@ -8,7 +8,7 @@ import HomePage from './pages/HomePage'
 import { useState } from 'react'
 function App() {
 
-  const [isSidebarVisible, setIsSidebarVisible] = useState(false); // State to manage sidebar visibility
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false); 
 
   return (
     <div className='flex'>

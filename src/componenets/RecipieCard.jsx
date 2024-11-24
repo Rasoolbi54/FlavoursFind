@@ -1,11 +1,11 @@
 import React from "react";
 import { useMealContext } from "../pages/Context";
 import { Link } from "react-router-dom";
-// Import the custom hook from context.jsx
+
 
 function RecipieCard({ meal }) {
-  const { favorites, toggleFavorite } = useMealContext(); // Access context
-  const isFavorite = favorites.some((fav) => fav.idMeal === meal.idMeal);  // Check if the meal is a favorite
+  const { favorites, toggleFavorite } = useMealContext(); 
+  const isFavorite = favorites.some((fav) => fav.idMeal === meal.idMeal);  
 
   return (
     <div key={meal.idMeal} className="recipe-card bg-[#e9e8e9] p-4 rounded-lg shadow-md">
@@ -27,7 +27,7 @@ function RecipieCard({ meal }) {
 
         {/* Toggle Favorite Button */}
         <button
-          onClick={() => toggleFavorite(meal)}  // Use toggleFavorite function from context
+          onClick={() => toggleFavorite(meal)} 
           className={`px-4 py-2 rounded-md ${
             isFavorite ? "bg-red-500 text-white" : "bg-white text-gray-700"
           }`}

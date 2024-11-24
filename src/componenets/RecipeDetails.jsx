@@ -1,60 +1,4 @@
-// import React, { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
-// import { useMealContext } from "../pages/Context";
-// // Import the custom hook
 
-// function RecipeDetails() {
-//   const { id } = useParams();
-//   const [meal, setMeal] = useState(null);
-//   const { favorites, toggleFavorite } = useMealContext(); // Access context
-//   const [isFavorite, setIsFavorite] = useState(false);
-
-//   useEffect(() => {
-//     const fetchMeal = async () => {
-//       const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
-//       const data = await response.json();
-//       setMeal(data.meals ? data.meals[0] : null);
-//     };
-//     fetchMeal();
-//   }, [id]);
-
-//   useEffect(() => {
-//     if (meal) {
-//       setIsFavorite(favorites.some((fav) => fav.idMeal === meal.idMeal)); // Update favorite status
-//     }
-//   }, [meal, favorites]);
-
-//   if (!meal) return <p>Loading...</p>;
-
-//   return (
-//     <div className="meal-details-container">
-//       <div className="meal-header">
-//         <h2>{meal.strMeal}</h2>
-//         <img src={meal.strMealThumb} alt={meal.strMeal} className="meal-image" />
-//         <button
-//           onClick={() => toggleFavorite(meal)} // Toggle favorite on button click
-//           className={`favorite-btn ${isFavorite ? "favorited" : ""}`}
-//         >
-//           {isFavorite ? "Unfavorite" : "Favorite"}
-//         </button>
-//       </div>
-//       <div className="meal-body">
-//         <h3>Ingredients</h3>
-//         <ul>
-//           {Object.keys(meal)
-//             .filter((key) => key.includes("strIngredient") && meal[key])
-//             .map((key) => (
-//               <li key={key}>{meal[key]}</li>
-//             ))}
-//         </ul>
-//         <h3>Instructions</h3>
-//         <p>{meal.strInstructions}</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default RecipeDetails;
 
 
 
@@ -63,9 +7,9 @@ import { useParams } from "react-router-dom";
 import { useMealContext } from "../pages/Context";
 
 function RecipeDetails() {
-  const { id } = useParams(); // Get meal id from URL parameters
+  const { id } = useParams(); 
   const [meal, setMeal] = useState(null);
-  const { favorites, toggleFavorite } = useMealContext(); // Access context for favorites
+  const { favorites, toggleFavorite } = useMealContext(); 
   const [isFavorite, setIsFavorite] = useState(false);
 
   // Fetch meal details from API
@@ -81,7 +25,7 @@ function RecipeDetails() {
   // Check if meal is already in favorites
   useEffect(() => {
     if (meal) {
-      setIsFavorite(favorites.some((fav) => fav.idMeal === meal.idMeal)); // Update favorite status
+      setIsFavorite(favorites.some((fav) => fav.idMeal === meal.idMeal)); 
     }
   }, [meal, favorites]);
 
@@ -139,7 +83,7 @@ function RecipeDetails() {
           {/* Favorite Button */}
           <div className="mt-4">
             <button
-              onClick={() => toggleFavorite(meal)} // Toggle favorite on button click
+              onClick={() => toggleFavorite(meal)} 
               className={`favorite-btn px-6 py-3 rounded-md ${
                 isFavorite ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"
               }`}

@@ -13,8 +13,8 @@ function HomePage({setIsSidebarVisible}) {
       style={{
         backgroundImage:
           "url('https://media.istockphoto.com/id/1820694690/vector/cooking-background-with-decorative-frame-horizontal-flyer-with-food-items-meal-ingredients.jpg?s=612x612&w=0&k=20&c=Eup2tjfKPjVgsu8MgnVwBhICoAtj_fGTOfquPOkDnWc=')",
-        backgroundPosition: "center", // Ensure the image is centered
-        backgroundSize: "cover", // Ensure the image covers the full screen
+        backgroundPosition: "center", 
+        backgroundSize: "cover", 
       }}
     >
       {/* Main Content */}
