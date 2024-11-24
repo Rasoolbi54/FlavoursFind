@@ -14,44 +14,44 @@ function SideBar() {
   return (
     <div>
       {/* Only render DesktopSidebar and MobileSidebar if not on RecipeDetails page */}
-      {!isRecipeDetailsPage && <DesktopSidebar />}
+      {/* {!isRecipeDetailsPage && <DesktopSidebar />} */}
       {!isRecipeDetailsPage && <MobileSidebar />}
     </div>
   );
 }
 
-const DesktopSidebar = () => {
-  return (
-    <div className="p-3 md:p-10  border-r min-h-screen w-24 md:w-64 hidden sm:block">
-      <div className="flex flex-col gap-20 sticky top-10 left-0">
-        <div className=''>
-        <div className="flex fixed  top-12 left-3 items-center justify-start space-x-2">
-          <p className="text-3xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-blue-600 tracking-wider drop-shadow-lg">
-            Flavours Find
-          </p>
-        </div>
+// const DesktopSidebar = () => {
+//   return (
+//     <div className="p-3 md:p-10  border-r min-h-screen w-24 md:w-0 hidden sm:block">
+//       <div className="flex flex-col gap-20 sticky top-10 left-0">
+//         <div className=''>
+//         <div className="flex fixed  top-12 left-3 items-center justify-start space-x-2">
+//           <p className="text-3xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-blue-600 tracking-wider drop-shadow-lg">
+//             Flavours Find
+//           </p>
+//         </div>
 
-        </div>
-        <ul className="flex flex-col mt-36 items-center fixed md:items-start gap-8">
-          <Link to={"/"} className="flex gap-1">
-            <span className="bi bi-house-door "></span>
-            <span className="font-bold hidden md:block">Home</span>
-          </Link>
-          <Link to={"/favorites"} className="flex gap-1">
-          <span className="bi bi-heart "></span>
-            <span className="font-bold hidden md:block">Favorites</span>
-          </Link>
-        </ul>
-      </div>
-    </div>
-  );
-};
+//         </div>
+//         <ul className="flex flex-col mt-36 items-center fixed md:items-start gap-8">
+//           <Link to={"/"} className="flex gap-1">
+//             <span className="bi bi-house-door "></span>
+//             <span className="font-bold hidden md:block">Home</span>
+//           </Link>
+//           <Link to={"/favorites"} className="flex gap-1">
+//           <span className="bi bi-heart "></span>
+//             <span className="font-bold hidden md:block">Favorites</span>
+//           </Link>
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
 
 const MobileSidebar = () => {
   return (
-    <div className="flex justify-center gap-10 border-t fixed w-full bottom-0 left-0 bg-white z-10 p-2 sm:hidden">
-      <Link to={"/"}>
-        <span className="bi bi-house-door"></span>
+    <div className="flex justify-center gap-10 border-t fixed w-full bottom-0 left-0 bg-white z-10 p-3 sm:hidden">
+      <Link to={"/search"}>
+        <span className="bi bi-search" ></span>
       </Link>
       <Link to={"/favorites"}>
         <span className="bi bi-heart"></span>

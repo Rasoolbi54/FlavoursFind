@@ -144,7 +144,7 @@ function RecipeDetails() {
                 isFavorite ? "bg-red-500 text-white" : "bg-gray-200 text-gray-700"
               }`}
             >
-              {isFavorite ? "Unfavorite" : "Add to Favorites"}
+              {isFavorite ? "Remove" : "Add to Favorites"}
             </button>
           </div>
         </div>
